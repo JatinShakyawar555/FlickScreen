@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  affects the style of an element's scrollbar when it has scrollable overflow. */
+::-webkit-scrollbar {
+	width: 7px;
+	height: 6px;
+}
+
+/* jo scroll bar hai , uske design ke liye */
+::-webkit-scrollbar-thumb{
+	background-color: #181819;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #6556CD;
+	border-radius: 10px;
+}
+:root{
+	background: #1F1E24;
+}
+
+
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border:0 !important;
+	background-image: none;
+	background: #27272a;
+	flex: 1;
+	padding: 0 0.5em;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1em;
+	font-family: "Open Sans",sans-serif;
+}
+
+select::-ms-expand{
+	display: none;
+}
+
+.select{
+	position: relative;
+	display: flex;
+	width: 20em;
+	height: 3em;
+	line-height: 3;
+	background: #27272a;
+	overflow:hidden;
+	border-radius: 0.25em;
+}
+
+.select::after{
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	pad: 0 1em;
+	background: #27272a;
+	cursor: pointer;
+	pointer-events: none;
+	transition: 0.25s all ease;
+}
+
+.select:hover::after{
+	color: #6556cd;
+}
+
+@media screen and (max-width: 900px)
+       {
+    .hori {
+        display: flex;
+		flex-direction: column;
+		flex-wrap:nowrap
+    }
+
+	.side{
+		min-width: 90px;
+		font-weight: 100;
+		padding-left: 3px;
+	}
+}
